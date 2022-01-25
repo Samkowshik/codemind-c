@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,d,r,c,i,p,s=0;
+    int n,d,i,r,c,p,s=0;
     scanf("%d",&n);
     d=n;
     for(c=0;d!=0;c++)
@@ -9,24 +9,24 @@ int main()
         d=d/10;
     }
     d=n;
-    for(;d!=0;)
+    while(d!=0)
     {
-    	p=1;
-    	r=d%10;
-    	for(i=1;i<=c;i++)
-    	{
-    		p=p*r;
-		}
-		s=s+p;
-		d=d/10;
-		c--;
-	}
-	if(s==n)
-	{
-		printf("True");
-	}
-	else
-	{
-		printf("False");
-	}
+        p=1;
+        r=d%10;
+        for(i=1;i<=c;i++)
+        {
+            p=p*r;
+        }
+        s=s+p;
+        d=d/10;
+        c--;
+    }
+    if(s==n)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
 }
