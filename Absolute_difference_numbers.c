@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,x,i,o=1,c,l,f,d;
+    scanf("%d%d",&n,&x);
+    for(i=1;i<=x;i++)
+    {
+    	o=o*10;
+	}
+	l=n%o;
+	d=n;
+	for(c=0;d!=0;c++)
+	{
+		d=d/10;
+	}
+	o=1;
+	for(i=1;i<=c-x;i++)
+	{
+		o=o*10;
+	}
+	f=n/o;
+	if(l>f)
+	{
+		printf("%d",l-f);    
+	}
+    else
+    {
+        printf("%d",f-l);
+    }
+}
