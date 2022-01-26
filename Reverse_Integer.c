@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n,x,r;
+    scanf("%d",&x);
+    while(x%10==0)
+    {
+        x=x/10;
+    }
+    n=x;
+    if(n<0)
+    {
+        n=n*-1;
+        printf("-");
+        while(n!=0)
+        {
+            r=n%10;
+            printf("%d",r);
+            n=n/10;
+        }
+    }
+    else
+    {
+        while(n!=0)
+        {
+            r=n%10;
+            printf("%d",r);
+            n=n/10;
+        }
+    }
+}
