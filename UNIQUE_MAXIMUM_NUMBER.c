@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a[n],i,j,f,o=1,b=0;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        f=0;
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+            {
+                continue;
+            }
+            if(a[i]==a[j])
+            {
+                f=1;
+            }
+        }
+        if(f==0)
+        {
+            b=a[i]>b?a[i]:b;
+            o=0;
+        }
+    }
+    if(o==0)
+    {
+        printf("%d",b);
+    }
+    else
+    {
+        printf("-1");
+    }
+}
