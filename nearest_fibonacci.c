@@ -14,34 +14,35 @@ int feb(int n)
     }
     return f;
 }
-int main()
-{
-    int n,i,j,fi=1,fj=1;
-    scanf("%d",&n);
-    i=n,j=n;
-    while(fi==1&&fj==1)
+
+    int main()
     {
-        i++;
-        if(feb(i)==0)
+        int n,i,j,fi=1,fj=1;
+        scanf("%d",&n);
+        i=n,j=n;
+        while(fi==1&&fj==1)
         {
-            fi=0;
+            i++;
+            if(feb(i)==0)
+            {
+                fi=0;
+            }
+            j--;
+            if(feb(j)==0)
+            {
+                fj=0;
+            }
         }
-        j--;
-        if(feb(j)==0)
+        if(fi==0&&fj==0)
         {
-            fj=0;
+            printf("%d %d",j,i);
+        }
+        else if(fi==0)
+        {
+            printf("%d",i);
+        }
+        else
+        {
+            printf("%d",j);
         }
     }
-    if(fi==0&&fj==0)
-    {
-        printf("%d %d",j,i);
-    }
-    else if(fi==0)
-    {
-        printf("%d",i);
-    }
-    else
-    {
-        printf("%d",j);
-    }
-}
