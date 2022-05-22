@@ -1,29 +1,29 @@
 #include<stdio.h>
 int main()
 {
-    int n,sq,re,sqre,r,d,s;
+    int r,n,d,sq,_sq,b=0;
     scanf("%d",&n);
     sq=n*n;
-    while(n!=0)
+    while(n)
     {
         r=n%10;
-        s=r+s*10;
+        b=b*10+r;
         n=n/10;
     }
-    re=s;
-    s=0;
-    sqre=re*re;
-    for(d=sqre;d!=0;d=d/10)
+    _sq=b*b;
+    b=0;
+    while(_sq)
     {
-        r=d%10;
-        s=r+s*10;
+        r=_sq%10;
+        b=b*10+r;
+        _sq=_sq/10;
     }
-    if(sq==s)
+    if(b==sq)
     {
         printf("True");
     }
     else
     {
-        printf("False")
+        printf("False");
     }
 }
