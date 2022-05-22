@@ -1,24 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int rw,i,j,s;
-    scanf("%d",&rw);
-    int a[rw][2];
-    for(i=0;i<rw;i++)
+    int n,i;
+    scanf("%d",&n);
+    int a[n][2];
+    for(i=0;i<n;i++)
     {
-        for(j=0;j<2;j++)
-        {
-            scanf("%d",&a[i][j]);
-        }
+        scanf("%d %d",&a[i][0],&a[i][1]);
     }
-    for(i=0;i<rw;i++)
+    for(i=0;i<n;i++)
     {
-        s=0;
-        for(j=0;j<2;j++)
-        {
-            s=s+a[i][j];
-        }
         printf("%d
-",s);
+",a[i][0]+a[i][1]);
     }
 }
