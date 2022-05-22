@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int n,sq,i,r,s=0;
+    int n,i,r,sq,s=0;
     scanf("%d",&n);
     sq=n*n;
-    while(sq!=0)
+    while(sq)
     {
         r=sq%10;
         s=s+r;
