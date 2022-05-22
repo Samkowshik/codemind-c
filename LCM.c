@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,i,m;
+    int a,b,m,n;
     scanf("%d%d",&a,&b);
     m=a>b?a:b;
-    for(i=m;;i++)
+    for(n=m;;n++)
     {
-        if(i%a==0&&i%b==0)
+        if(n%a==0&&n%b==0)
         {
-            printf("%d",i);
+            printf("%d",n);
             break;
         }
     }
