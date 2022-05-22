@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,r,a[10],f=1,c;
+    int n,i,j,a[10],c=0,u=1;
     scanf("%d",&n);
-    for(c=0;n>0;c++)
+    for(i=0;n!=0;i++)
     {
-        r=n%10;
-        a[c]=r;
+        a[i]=n%10;
         n=n/10;
+        c++;
     }
-    for(i=0;i<=c;i++)
+    for(i=0;i<c;i++)
     {
-        for(j=0;j<=c;j++)
+        for(j=0;j<c;j++)
         {
             if(i==j)
             {
@@ -19,17 +19,17 @@ int main()
             }
             if(a[i]==a[j])
             {
-                f=0;
+                u=0;
                 break;
             }
         }
     }
-    if(f==1)
+    if(u==0)
     {
-        printf("Unique Number");
+        printf("Not Unique Number");
     }
     else
     {
-        printf("Not Unique Number");
+        printf("Unique Number");
     }
 }
