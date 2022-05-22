@@ -1,25 +1,21 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int n,d,i,r,c,p,s=0;
+    int n,d,s=0,c=0,r,i;
     scanf("%d",&n);
     d=n;
-    for(c=0;d!=0;c++)
+    while(d)
     {
         d=d/10;
+        c++;
     }
     d=n;
-    while(d!=0)
+    for(i=c;d!=0;i--)
     {
-        p=1;
         r=d%10;
-        for(i=1;i<=c;i++)
-        {
-            p=p*r;
-        }
-        s=s+p;
+        s=s+pow(r,i);
         d=d/10;
-        c--;
     }
     if(s==n)
     {
